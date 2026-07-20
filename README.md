@@ -2,6 +2,11 @@
 
 根据 GitHub 仓库或本地项目，自动生成中文 Markdown 使用教程。
 
+## 支持平台
+
+- **Windows 10 / 11**（PowerShell 或 CMD，支持 WSL）
+- **Ubuntu / Linux**（Ubuntu 20.04+ 及其他常见发行版）
+
 ## 环境要求
 
 - Node.js >= 18
@@ -17,6 +22,8 @@ npm install
 
 ## 使用
 
+### Ubuntu / Linux
+
 ```bash
 export OPENAI_API_KEY=sk-...
 export OPENAI_BASE_URL=https://api.kimi.com/coding/v1
@@ -28,6 +35,33 @@ node generate.js --github https://github.com/user/repo
 # 从本地项目生成
 node generate.js --local /path/to/project
 ```
+
+### Windows（PowerShell）
+
+Windows 下需先安装 [Node.js](https://nodejs.org/)（>= 18）和 [Git for Windows](https://git-scm.com/download/win)，然后在 PowerShell 中执行：
+
+```powershell
+$env:OPENAI_API_KEY="sk-..."
+$env:OPENAI_BASE_URL="https://api.kimi.com/coding/v1"
+$env:OPENAI_MODEL="kimi-k3"
+
+# 从 GitHub 仓库生成
+node generate.js --github https://github.com/user/repo
+
+# 从本地项目生成（路径用 Windows 格式）
+node generate.js --local C:\path\to\project
+```
+
+如果使用 CMD，设置环境变量的语法改为：
+
+```cmd
+set OPENAI_API_KEY=sk-...
+set OPENAI_BASE_URL=https://api.kimi.com/coding/v1
+set OPENAI_MODEL=kimi-k3
+node generate.js --github https://github.com/user/repo
+```
+
+> 提示：Windows 环境变量只在当前终端会话生效，重新打开终端需重新设置。
 
 生成的教程保存在 `output/` 目录下。
 
