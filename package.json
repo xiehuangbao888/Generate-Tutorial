@@ -1,0 +1,15 @@
+{
+  "name": "wiki-tutorial-agent",
+  "version": "1.0.0",
+  "description": "Generate a markdown tutorial from a GitHub repo or local project.",
+  "main": "generate.js",
+  "scripts": {
+    "start": "node generate.js"
+  },
+  "dependencies": {
+    "openai": "^4.0.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
