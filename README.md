@@ -15,8 +15,8 @@
 ## 安装
 
 ```bash
-git clone https://github.com/<你的用户名>/wiki-tutorial-agent.git
-cd wiki-tutorial-agent
+git clone https://github.com/xiehuangbao888/Generate-Tutorial.git
+cd Generate-Tutorial
 npm install
 ```
 
