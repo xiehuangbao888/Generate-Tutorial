@@ -1,4 +1,4 @@
-# Wiki Tutorial Agent
+# Tutorial Agent
 
 根据 GitHub 仓库或本地项目，自动生成中文 Markdown 使用教程。
 
