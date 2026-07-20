@@ -19,6 +19,8 @@ npm install
 
 ```bash
 export OPENAI_API_KEY=sk-...
+export OPENAI_BASE_URL=https://api.kimi.com/coding/v1
+export OPENAI_MODEL=kimi-k3
 
 # 从 GitHub 仓库生成
 node generate.js --github https://github.com/user/repo
